@@ -1,0 +1,15 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+# Enforce LF endings for text files
+* text=auto
+*.cs eol=lf
+*.meta eol=lf
+*.anim eol=lf
+*.json eol=lf
+*.unity eol=lf
+
+# Binary files (no conversion)
+*.png binary
+*.jpg binary
+*.mp4 binary
+*.mp3 binary

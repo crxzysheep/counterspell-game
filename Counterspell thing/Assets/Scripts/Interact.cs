@@ -9,6 +9,7 @@ public class Interact : MonoBehaviour
     public void openDialogue(){
         if (dialogue != null){
             dialogue.SetActive(true);
+            gameObject.SetActive(false);
         }
     }
 }

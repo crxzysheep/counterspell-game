@@ -6,9 +6,11 @@ using TMPro;
 public class Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
+    public TextMeshProUGUI textNames;
 
     [TextArea]
     public string[] lines;
+    public string[] names;
     public float textSpeed;
     public static bool playDialogue = false;
 
@@ -50,6 +52,7 @@ public class Dialogue : MonoBehaviour
     {
         playDialogue = true;
         index = 0;
+        textNames.text = names[index];
         StartCoroutine(TypeLine());
     }
 
@@ -62,12 +65,13 @@ public class Dialogue : MonoBehaviour
         }
     }
 
-    void NextLine()
+    public void NextLine()
     {
         if (index < lines.Length - 1)
         {
             index++;
             textComponent.text = string.Empty;
+            textNames.text = names[index];
             StartCoroutine(TypeLine());
         }
         else
